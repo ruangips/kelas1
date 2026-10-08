@@ -15,7 +15,7 @@
     }
 
     body {
-      background: #fffaf0;
+      background: #fff0f6;
       color: #333;
     }
 
@@ -27,7 +27,7 @@
       justify-content: space-between;
       align-items: center;
       background: #ffffff;
-      box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+      box-shadow: 0 3px 15px rgba(255, 105, 180, 0.15);
       position: sticky;
       top: 0;
       z-index: 10;
@@ -36,7 +36,7 @@
     .logo {
       font-size: 25px;
       font-weight: bold;
-      color: #ff7b54;
+      color: #ff4f8b;
     }
 
     .nav-menu {
@@ -47,12 +47,12 @@
 
     .nav-menu a {
       text-decoration: none;
-      color: #555;
+      color: #a14b6a;
       font-weight: bold;
     }
 
     .nav-menu a:hover {
-      color: #ff7b54;
+      color: #ff4f8b;
     }
 
     /* Hero */
@@ -63,7 +63,7 @@
       align-items: center;
       justify-content: space-between;
       gap: 50px;
-      background: linear-gradient(135deg, #fff4c4, #dff7ff);
+      background: linear-gradient(135deg, #ffe0ec, #ffd6f0, #ffc9e0);
     }
 
     .hero-text {
@@ -73,18 +73,18 @@
     .hero-text h1 {
       font-size: clamp(40px, 6vw, 65px);
       line-height: 1.1;
-      color: #ff6b35;
+      color: #ff3d8b;
       margin-bottom: 20px;
     }
 
     .hero-text h1 span {
-      color: #4b9cff;
+      color: #d63384;
     }
 
     .hero-text p {
       font-size: 20px;
       line-height: 1.7;
-      color: #555;
+      color: #7a4a5e;
       margin-bottom: 30px;
     }
 
@@ -92,32 +92,42 @@
       display: inline-block;
       padding: 15px 30px;
       border-radius: 50px;
-      background: #ff7b54;
+      background: #ff5ea8;
       color: white;
       text-decoration: none;
       font-size: 18px;
       font-weight: bold;
-      box-shadow: 0 6px 0 #d95735;
+      box-shadow: 0 6px 0 #c93a7d;
       transition: 0.2s;
     }
 
     .btn:hover {
       transform: translateY(3px);
-      box-shadow: 0 3px 0 #d95735;
+      box-shadow: 0 3px 0 #c93a7d;
     }
 
-    /* Ilustrasi */
+    /* Foto Mawar Real */
     .hero-image {
-      width: 380px;
-      height: 380px;
+      width: 420px;
+      height: 420px;
       border-radius: 50%;
       background: #ffffff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 150px;
-      box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+      overflow: hidden;
+      position: relative;
+      flex-shrink: 0;
+      box-shadow:
+        0 15px 45px rgba(255, 105, 180, 0.5),
+        0 0 0 10px #ffffff,
+        0 0 0 20px rgba(255, 154, 194, 0.4),
+        0 0 0 30px rgba(255, 200, 220, 0.25);
       animation: floating 3s ease-in-out infinite;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
 
     @keyframes floating {
@@ -138,12 +148,12 @@
 
     .section-title {
       font-size: 38px;
-      color: #333;
+      color: #d63384;
       margin-bottom: 10px;
     }
 
     .section-description {
-      color: #777;
+      color: #a06a80;
       font-size: 18px;
       margin-bottom: 45px;
     }
@@ -157,13 +167,17 @@
     .feature-card {
       padding: 30px 20px;
       border-radius: 25px;
-      background: #fff8e8;
+      background: #ffe8f2;
       transition: 0.3s;
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+      display: block;
     }
 
     .feature-card:hover {
       transform: translateY(-8px);
-      box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+      box-shadow: 0 12px 25px rgba(255, 105, 180, 0.25);
     }
 
     .feature-icon {
@@ -174,18 +188,18 @@
     .feature-card h3 {
       font-size: 22px;
       margin-bottom: 10px;
-      color: #444;
+      color: #b92e6b;
     }
 
     .feature-card p {
-      color: #777;
+      color: #8a5a70;
       line-height: 1.5;
     }
 
     /* About */
     .about {
       padding: 80px 8%;
-      background: #eaf9ff;
+      background: #ffe0ee;
       text-align: center;
     }
 
@@ -197,14 +211,14 @@
     .about p {
       font-size: 18px;
       line-height: 1.8;
-      color: #555;
+      color: #7a4a5e;
     }
 
     /* CTA */
     .cta {
       padding: 70px 8%;
       text-align: center;
-      background: linear-gradient(135deg, #ffcf70, #ff9b71);
+      background: linear-gradient(135deg, #ff9ec4, #ff6fa5);
     }
 
     .cta h2 {
@@ -221,20 +235,20 @@
 
     .btn-white {
       background: white;
-      color: #ff6b35;
-      box-shadow: 0 6px 0 #d9d9d9;
+      color: #ff3d8b;
+      box-shadow: 0 6px 0 #e0c7d3;
     }
 
     .btn-white:hover {
-      box-shadow: 0 3px 0 #d9d9d9;
+      box-shadow: 0 3px 0 #e0c7d3;
     }
 
     /* Footer */
     footer {
       padding: 25px;
       text-align: center;
-      background: #333;
-      color: white;
+      background: #7a2a4d;
+      color: #ffe0ee;
     }
 
     /* Responsive */
@@ -264,9 +278,8 @@
       }
 
       .hero-image {
-        width: 260px;
-        height: 260px;
-        font-size: 100px;
+        width: 280px;
+        height: 280px;
       }
 
       .feature-container {
@@ -288,7 +301,7 @@
 
   <!-- Navbar -->
   <nav>
-    <div class="logo">🌈 Belajar Ceria</div>
+    <div class="logo">🌹 Belajar Ceria</div>
 
     <ul class="nav-menu">
       <li><a href="#home">Beranda</a></li>
@@ -301,7 +314,7 @@
   <section class="hero" id="home">
     <div class="hero-text">
       <h1>
-        Belajar Jadi <span>Menyenangkan!</span> 🎉
+        Belajar Jadi <span>Menyenangkan!</span> 🌹
       </h1>
 
       <p>
@@ -309,13 +322,19 @@
         dan bentuk melalui permainan edukatif yang seru dan menyenangkan.
       </p>
 
-      <a href="#fitur" class="btn">
+      <a href="https://ruangips.github.io/kelas1/raisa_1.html" class="btn" target="_blank" rel="noopener">
         🚀 Mulai Bermain
       </a>
     </div>
 
     <div class="hero-image">
-      🧒📚
+      <!-- Foto Mawar Pink Asli - dengan fallback otomatis -->
+      <img
+        src="https://images.unsplash.com/photo-1496062031456-07b8f162a322?auto=format&fit=crop&w=1000&q=90"
+        alt="Bunga Mawar Pink Asli"
+        loading="eager"
+        onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1548586196-aa5803b77379?auto=format&fit=crop&w=1000&q=90';"
+      />
     </div>
   </section>
 
@@ -329,37 +348,37 @@
 
     <div class="feature-container">
 
-      <div class="feature-card">
+      <a href="https://ruangips.github.io/kelas1/raisa_1.html" target="_blank" rel="noopener" class="feature-card">
         <div class="feature-icon">🔤</div>
         <h3>Belajar Huruf</h3>
         <p>
           Kenali huruf A sampai Z dengan cara yang menyenangkan.
         </p>
-      </div>
+      </a>
 
-      <div class="feature-card">
+      <a href="https://ruangips.github.io/kelas1/raisa_1.html" target="_blank" rel="noopener" class="feature-card">
         <div class="feature-icon">🔢</div>
         <h3>Belajar Angka</h3>
         <p>
           Berlatih mengenal angka dan berhitung dasar.
         </p>
-      </div>
+      </a>
 
-      <div class="feature-card">
+      <a href="https://ruangips.github.io/kelas1/raisa_1.html" target="_blank" rel="noopener" class="feature-card">
         <div class="feature-icon">🎨</div>
         <h3>Mengenal Warna</h3>
         <p>
           Belajar mengenal berbagai macam warna melalui permainan.
         </p>
-      </div>
+      </a>
 
-      <div class="feature-card">
+      <a href="https://ruangips.github.io/kelas1/raisa_1.html" target="_blank" rel="noopener" class="feature-card">
         <div class="feature-icon">🔺</div>
         <h3>Mengenal Bentuk</h3>
         <p>
           Temukan dan kenali berbagai bentuk dasar di sekitar kita.
         </p>
-      </div>
+      </a>
 
     </div>
   </section>
@@ -386,7 +405,7 @@
       Ayo bermain, belajar, dan jadilah anak hebat!
     </p>
 
-    <a href="#fitur" class="btn btn-white">
+    <a href="https://ruangips.github.io/kelas1/raisa_1.html" class="btn btn-white" target="_blank" rel="noopener">
       🎮 Main Sekarang
     </a>
   </section>
