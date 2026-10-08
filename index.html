@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Game edukasi menyenangkan untuk anak kelas 1 SD. Belajar membaca, berhitung, mengenal warna, dan bentuk sambil bermain.">
+  <title>Belajar Ceria - Game Edukasi Anak</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Comic Sans MS", "Trebuchet MS", sans-serif;
+    }
+
+    body {
+      background: #fffaf0;
+      color: #333;
+    }
+
+    /* Navbar */
+    nav {
+      width: 100%;
+      padding: 18px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #ffffff;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: bold;
+      color: #ff7b54;
+    }
+
+    .nav-menu {
+      display: flex;
+      gap: 25px;
+      list-style: none;
+    }
+
+    .nav-menu a {
+      text-decoration: none;
+      color: #555;
+      font-weight: bold;
+    }
+
+    .nav-menu a:hover {
+      color: #ff7b54;
+    }
+
+    /* Hero */
+    .hero {
+      min-height: 80vh;
+      padding: 70px 8%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 50px;
+      background: linear-gradient(135deg, #fff4c4, #dff7ff);
+    }
+
+    .hero-text {
+      max-width: 600px;
+    }
+
+    .hero-text h1 {
+      font-size: clamp(40px, 6vw, 65px);
+      line-height: 1.1;
+      color: #ff6b35;
+      margin-bottom: 20px;
+    }
+
+    .hero-text h1 span {
+      color: #4b9cff;
+    }
+
+    .hero-text p {
+      font-size: 20px;
+      line-height: 1.7;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 15px 30px;
+      border-radius: 50px;
+      background: #ff7b54;
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      box-shadow: 0 6px 0 #d95735;
+      transition: 0.2s;
+    }
+
+    .btn:hover {
+      transform: translateY(3px);
+      box-shadow: 0 3px 0 #d95735;
+    }
+
+    /* Ilustrasi */
+    .hero-image {
+      width: 380px;
+      height: 380px;
+      border-radius: 50%;
+      background: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 150px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+      animation: floating 3s ease-in-out infinite;
+    }
+
+    @keyframes floating {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-15px);
+      }
+    }
+
+    /* Fitur */
+    .features {
+      padding: 80px 8%;
+      text-align: center;
+      background: white;
+    }
+
+    .section-title {
+      font-size: 38px;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .section-description {
+      color: #777;
+      font-size: 18px;
+      margin-bottom: 45px;
+    }
+
+    .feature-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 25px;
+    }
+
+    .feature-card {
+      padding: 30px 20px;
+      border-radius: 25px;
+      background: #fff8e8;
+      transition: 0.3s;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+    }
+
+    .feature-icon {
+      font-size: 55px;
+      margin-bottom: 15px;
+    }
+
+    .feature-card h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
+      color: #444;
+    }
+
+    .feature-card p {
+      color: #777;
+      line-height: 1.5;
+    }
+
+    /* About */
+    .about {
+      padding: 80px 8%;
+      background: #eaf9ff;
+      text-align: center;
+    }
+
+    .about-box {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .about p {
+      font-size: 18px;
+      line-height: 1.8;
+      color: #555;
+    }
+
+    /* CTA */
+    .cta {
+      padding: 70px 8%;
+      text-align: center;
+      background: linear-gradient(135deg, #ffcf70, #ff9b71);
+    }
+
+    .cta h2 {
+      font-size: 40px;
+      color: white;
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      color: white;
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .btn-white {
+      background: white;
+      color: #ff6b35;
+      box-shadow: 0 6px 0 #d9d9d9;
+    }
+
+    .btn-white:hover {
+      box-shadow: 0 3px 0 #d9d9d9;
+    }
+
+    /* Footer */
+    footer {
+      padding: 25px;
+      text-align: center;
+      background: #333;
+      color: white;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 50px;
+      }
+
+      .feature-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        padding: 15px 5%;
+      }
+
+      .nav-menu {
+        display: none;
+      }
+
+      .hero {
+        padding: 50px 5%;
+      }
+
+      .hero-image {
+        width: 260px;
+        height: 260px;
+        font-size: 100px;
+      }
+
+      .feature-container {
+        grid-template-columns: 1fr;
+      }
+
+      .section-title {
+        font-size: 30px;
+      }
+
+      .cta h2 {
+        font-size: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">🌈 Belajar Ceria</div>
+
+    <ul class="nav-menu">
+      <li><a href="#home">Beranda</a></li>
+      <li><a href="#fitur">Permainan</a></li>
+      <li><a href="#tentang">Tentang</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="hero-text">
+      <h1>
+        Belajar Jadi <span>Menyenangkan!</span> 🎉
+      </h1>
+
+      <p>
+        Yuk belajar sambil bermain! Kenali angka, huruf, warna,
+        dan bentuk melalui permainan edukatif yang seru dan menyenangkan.
+      </p>
+
+      <a href="#fitur" class="btn">
+        🚀 Mulai Bermain
+      </a>
+    </div>
+
+    <div class="hero-image">
+      🧒📚
+    </div>
+  </section>
+
+  <!-- Fitur -->
+  <section class="features" id="fitur">
+    <h2 class="section-title">🎮 Pilih Permainan</h2>
+
+    <p class="section-description">
+      Belajar berbagai hal sambil menyelesaikan permainan seru!
+    </p>
+
+    <div class="feature-container">
+
+      <div class="feature-card">
+        <div class="feature-icon">🔤</div>
+        <h3>Belajar Huruf</h3>
+        <p>
+          Kenali huruf A sampai Z dengan cara yang menyenangkan.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🔢</div>
+        <h3>Belajar Angka</h3>
+        <p>
+          Berlatih mengenal angka dan berhitung dasar.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🎨</div>
+        <h3>Mengenal Warna</h3>
+        <p>
+          Belajar mengenal berbagai macam warna melalui permainan.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🔺</div>
+        <h3>Mengenal Bentuk</h3>
+        <p>
+          Temukan dan kenali berbagai bentuk dasar di sekitar kita.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Tentang -->
+  <section class="about" id="tentang">
+    <div class="about-box">
+      <h2 class="section-title">📚 Tentang Belajar Ceria</h2>
+
+      <p>
+        Belajar Ceria adalah game edukasi sederhana yang dibuat khusus
+        untuk membantu anak kelas 1 SD belajar dengan cara yang lebih
+        interaktif dan menyenangkan. Materi dirancang dengan tampilan
+        warna-warni agar anak lebih tertarik untuk belajar.
+      </p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <h2>🌟 Siap Untuk Belajar?</h2>
+
+    <p>
+      Ayo bermain, belajar, dan jadilah anak hebat!
+    </p>
+
+    <a href="#fitur" class="btn btn-white">
+      🎮 Main Sekarang
+    </a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>
+      © 2026 Belajar Ceria | Game Edukasi Anak Kelas 1 SD
+    </p>
+  </footer>
+
+</body>
+</html>
